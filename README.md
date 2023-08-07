@@ -9,7 +9,7 @@ Sitio web de ventas y arriendo de propiedades a nivel nacional .
 
 1. Debes clonar el repositorio
 ```bash
-git clone https://github.com/danielJL19/desafiovlog.git
+git clone https://github.com/danielJL19/inmobilariad.git
 ```
 ## Prerrequisitos 📋
 
@@ -48,8 +48,8 @@ El proyecto fue creado con las siguientes tecnologías:
 - [Ruby on Rails](https://rubyonrails.org) - El framework web utilizado
 - [Ruby gems](https://rubygems.org) - Gestión de dependencias
 - [Postgresql](https://www.postgresql.org) - Sistema de base de datos
-- [Bootstrap](https://getbootstrap.com/) - Framework de CSS
-
+- [Tailwind](https://tailwindcss.com/) - Framework de CSS
+- [Flowbite](https://flowbite.com/) - Componentes de Tailwind
 ## Autores ✒️
 - **Daniel Jiménez L** - [Desarrollador Full-Stack](https://github.com/danielJL19/)
 
