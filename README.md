@@ -4,6 +4,7 @@ Sitio web de ventas y arriendo de propiedades a nivel nacional .
 ## Visuales
 [![desktop.png](https://i.postimg.cc/XYvbRYxH/desktop.png)](https://postimg.cc/Cz9XDY3k)
 [![mobile.png](https://i.postimg.cc/R0kxJQmy/mobile.png)](https://postimg.cc/B8BVdFXB)
+[![map.png](https://i.postimg.cc/qqfKFYTw/map.png)](https://postimg.cc/jwXCwMCn)
 ## Empezando 🚀
 
 1. Debes clonar el repositorio
