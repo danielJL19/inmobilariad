@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: one
+  name: MyString
+  room: MyString
+  bathroom: MyString
+
+two:
+  category: two
+  name: MyString
+  room: MyString
+  bathroom: MyString
