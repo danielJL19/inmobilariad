@@ -30,8 +30,10 @@
     
     <%= form.collection_select :category_id ,Category.order(:name), :id, :name, class:"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded" %>
   </div>
-
-  <div class="inline">
+  <div>
+    <%= form.file_field :images, multiples: true %>
+  </div>
+  <div class="my-5">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
