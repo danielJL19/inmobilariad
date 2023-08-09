@@ -4,9 +4,27 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all
+    #categoria
     if params[:category_id]
       @products = @products.where(category_id: params[:category_id])
     end
+    #min_price, ahora estan nill o nulos ya que no se le ha ingresado números
+    if params[:min_price].present? 
+      @products = @products.where('price >= ?', params[:min_price].to_i)
+    end
+
+    if params[:max_price].present? 
+      @products = @products.where('price <= ?', params[:max_price].to_i)
+    end
+
+    if params[:room] && params[:room].to_i !=0
+      @products = @products.where(room: params[:room].to_i)
+    end 
+
+    if params[:bathroom] && params[:bathroom].to_i != 0
+      @products = @products.where(price: params[:bathroom].to_i)
+    end
+
   end
 
   # GET /products/1 or /products/1.json
@@ -68,6 +86,9 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:category_id, :name, :room, :bathroom,images:[])
+      params.require(:product).permit(:category_id, :name, :room, :bathroom, :price, images: [])
+
     end
+
+    
 end

@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/danielJL19/inmobilariad/issues"
   },
-  "homepage": "https://github.com/danielJL19/inmobilariad#readme"
+  "homepage": "https://github.com/danielJL19/inmobilariad#readme",
+  "dependencies": {
+    "@rails/actiontext": "^7.0.6",
+    "trix": "^2.0.5"
+  }
 }

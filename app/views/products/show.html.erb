@@ -4,8 +4,36 @@
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
-    <%= render @product %>
+    <%# producto %>
+    <article>
+      <h1> <%= @product.name %> </h1>
+      <div class="grid grid-cols-6 gap-2">
 
+          <div class="col-span-5">
+              <div class="mb-3">
+                  <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
+              </div>
+              <div class="grid grid-cols-4 gap-4 justify-center">
+                  <div>
+                      <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+                  </div>
+                  <div>
+                      <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+                  </div>
+                  <div>
+                      <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+                  </div>
+                  
+              </div>
+          </div>
+
+          <div class="rounded-lg border p-5">
+            <h4 class="text-center">Habitaciones: <%= @product.room %></h4>
+          
+          </div>
+
+      </div>
+    </article>
     <%= link_to 'Edit this product', edit_product_path(@product), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
       <%= button_to 'Destroy this product', product_path(@product), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
