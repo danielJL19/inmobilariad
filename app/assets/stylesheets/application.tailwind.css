@@ -70,3 +70,21 @@ padding-right: 1.5rem; /* 24px */
 .h-80{
   height: 20rem;
 }
+.border-x{
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+.border-b-0{
+  border-bottom-width: 0px;
+}
+.border-b-2{
+  border-bottom-width: 2px;
+}
+.my-3{
+  margin-top: 0.75rem; /* 12px */
+margin-bottom: 0.75rem; /* 12px */
+}
+.text-2x1{
+  font-size: 1.5rem; /* 24px */
+line-height: 2rem; /* 32px */
+}

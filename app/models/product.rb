@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   #activeStorage
   has_many_attached :images
-
+  has_one_attached :photo
   #validaciones
   validates :name, presence: true, uniqueness:true
 

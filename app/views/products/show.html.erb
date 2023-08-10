@@ -13,23 +13,23 @@
               <div class="mb-3">
                   <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
               </div>
-              <div class="grid grid-cols-4 gap-4 justify-center">
-                  <div>
-                      <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
-                  </div>
-                  <div>
-                      <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
-                  </div>
-                  <div>
-                      <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
-                  </div>
-                  
-              </div>
+              <% unless @product.images.empty? %>
+                <div class="grid grid-cols-4 gap-4 justify-center">
+                    <% @product.images.each do |product|%>
+
+                      <%= image_tag(product, class:"h-auto rounded-lg") %>
+                    
+                    <% end %>
+
+                    
+                </div>
+              <% end %>
+     
           </div>
 
           <div class="rounded-lg border p-5">
             <h4 class="text-center">Habitaciones: <%= @product.room %></h4>
-          
+            
           </div>
 
       </div>
