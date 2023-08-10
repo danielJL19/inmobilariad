@@ -13,4 +13,6 @@ class Product < ApplicationRecord
 
   #relaciones
   belongs_to :category
+  has_many :product_tag
+  has_many :tag, :through => :product_tag
 end
