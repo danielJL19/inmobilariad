@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     end 
 
     if params[:bathroom] && params[:bathroom].to_i != 0
-      @products = @products.where(price: params[:bathroom].to_i)
+      @products = @products.where(bathroom: params[:bathroom].to_i)
     end
 
   end
@@ -86,7 +86,7 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:category_id, :name, :room, :bathroom, :price,:photo ,images: [])
+      params.require(:product).permit(:category_id, :name, :room, :bathroom, :price,:photo ,:body,images: [])
 
     end
 

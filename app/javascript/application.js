@@ -5,6 +5,8 @@ import "flowbite";
 import "trix"
 import "@rails/actiontext"
 //variables
+
+
 // Función que contiene el código para actualizar los valores del rango
 function setupRangeInputs() {
     const room_input = document.getElementById('room_input');

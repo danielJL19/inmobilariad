@@ -1,4 +1,4 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<div class="mx-auto md:w-2/3 w-full">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
@@ -11,7 +11,7 @@
 
           <div class="col-span-5">
               <div class="mb-3">
-                  <img class="h-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
+                  <%= image_tag @product.photo, class:"h-auto rounded-lg max-w-full" if @product.photo.attached? %>
               </div>
               <% unless @product.images.empty? %>
                 <div class="grid grid-cols-4 gap-4 justify-center">
@@ -39,5 +39,9 @@
       <%= button_to 'Destroy this product', product_path(@product), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
     <%= link_to 'Back to products', products_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+  <div>
+    <%= @product.body %>
+  
   </div>
 </div>

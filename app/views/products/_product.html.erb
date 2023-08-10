@@ -6,9 +6,18 @@
             <%= image_tag(image) %>
           <% end %>
           <div class="px-6 py-2">
-            <h3 class="text-start text-2x1 font-bold">  $<%= product.price %> </h3>
-            <p> room <%= product.room %> </p>
-
+            <h3 class="text-start text-2x1 font-bold text-lime-400">  $<%= product.price %> </h3>
+            <div class="flex justify-between">
+              <div class="flex">
+                <%= image_tag "bed.png", class:"room"%>
+                <%= product.room %>
+              </div>
+              <div class="flex">
+                <%= image_tag "bathroom", class:"room" %>
+                <%= product.bathroom %>
+              </div>
+            </div>
+              <p id="name"> <%= product.name %> </p>
           </div>
       </div>
     <% end %>
